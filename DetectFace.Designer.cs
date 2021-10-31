@@ -29,7 +29,6 @@ namespace Face_Recognition_Attendance_Event_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -40,20 +39,13 @@ namespace Face_Recognition_Attendance_Event_System
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facetblBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.facedbDataSet1 = new Face_Recognition_Attendance_Event_System.facedbDataSet1();
-            this.facetblTableAdapter = new Face_Recognition_Attendance_Event_System.facedbDataSet1TableAdapters.facetblTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facetblBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facedbDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,7 +129,7 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(463, 180);
+            this.textBox1.Location = new System.Drawing.Point(463, 154);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(101, 20);
             this.textBox1.TabIndex = 6;
@@ -145,7 +137,7 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(463, 206);
+            this.textBox2.Location = new System.Drawing.Point(463, 180);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(101, 20);
             this.textBox2.TabIndex = 7;
@@ -154,7 +146,7 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(356, 181);
+            this.label1.Location = new System.Drawing.Point(356, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 8;
@@ -164,57 +156,11 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(365, 207);
+            this.label2.Location = new System.Drawing.Point(368, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Student Name:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.studentnumberDataGridViewTextBoxColumn,
-            this.studentnameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.facetblBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 357);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(352, 85);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
-            // studentnumberDataGridViewTextBoxColumn
-            // 
-            this.studentnumberDataGridViewTextBoxColumn.DataPropertyName = "student_number";
-            this.studentnumberDataGridViewTextBoxColumn.HeaderText = "student_number";
-            this.studentnumberDataGridViewTextBoxColumn.Name = "studentnumberDataGridViewTextBoxColumn";
-            // 
-            // studentnameDataGridViewTextBoxColumn
-            // 
-            this.studentnameDataGridViewTextBoxColumn.DataPropertyName = "student_name";
-            this.studentnameDataGridViewTextBoxColumn.HeaderText = "student_name";
-            this.studentnameDataGridViewTextBoxColumn.Name = "studentnameDataGridViewTextBoxColumn";
-            // 
-            // facetblBindingSource
-            // 
-            this.facetblBindingSource.DataMember = "facetbl";
-            this.facetblBindingSource.DataSource = this.facedbDataSet1;
-            // 
-            // facedbDataSet1
-            // 
-            this.facedbDataSet1.DataSetName = "facedbDataSet1";
-            this.facedbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // facetblTableAdapter
-            // 
-            this.facetblTableAdapter.ClearBeforeFill = true;
             // 
             // label3
             // 
@@ -237,15 +183,50 @@ namespace Face_Recognition_Attendance_Event_System
             this.panel1.Size = new System.Drawing.Size(762, 63);
             this.panel1.TabIndex = 11;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.ForestGreen;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.Control;
+            this.button5.Location = new System.Drawing.Point(597, 185);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(121, 41);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Add New";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(381, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 17);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Event Name:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(463, 206);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(101, 20);
+            this.textBox3.TabIndex = 13;
+            // 
             // DetectFace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(766, 373);
+            this.ClientSize = new System.Drawing.Size(762, 369);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
@@ -266,9 +247,6 @@ namespace Face_Recognition_Attendance_Event_System
             this.Load += new System.EventHandler(this.DetectFace_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facetblBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facedbDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -288,14 +266,10 @@ namespace Face_Recognition_Attendance_Event_System
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private facedbDataSet1 facedbDataSet1;
-        private System.Windows.Forms.BindingSource facetblBindingSource;
-        private facedbDataSet1TableAdapters.facetblTableAdapter facetblTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentnumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
