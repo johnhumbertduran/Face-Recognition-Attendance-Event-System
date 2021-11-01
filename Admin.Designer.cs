@@ -34,18 +34,16 @@ namespace Face_Recognition_Attendance_Event_System
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.ForestGreen;
+            this.button2.BackColor = System.Drawing.Color.PowderBlue;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(71, 104);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(75, 99);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 49);
             this.button2.TabIndex = 4;
@@ -55,12 +53,12 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.ForestGreen;
+            this.button1.BackColor = System.Drawing.Color.PowderBlue;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(71, 170);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(75, 182);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 49);
             this.button1.TabIndex = 5;
@@ -70,12 +68,12 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.ForestGreen;
+            this.button4.BackColor = System.Drawing.Color.PowderBlue;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(238, 104);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(75, 256);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(137, 49);
             this.button4.TabIndex = 7;
@@ -90,7 +88,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(238, 170);
+            this.button5.Location = new System.Drawing.Point(75, 337);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(137, 49);
             this.button5.TabIndex = 8;
@@ -101,46 +99,34 @@ namespace Face_Recognition_Attendance_Event_System
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Product Sans Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Product Sans", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(178, 14);
+            this.label3.Location = new System.Drawing.Point(97, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 34);
+            this.label3.Size = new System.Drawing.Size(93, 34);
             this.label3.TabIndex = 6;
             this.label3.Text = "Admin";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.ForestGreen;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(455, 63);
-            this.panel1.TabIndex = 9;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(455, 283);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(298, 441);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(475, 326);
             this.MinimizeBox = false;
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -151,6 +137,5 @@ namespace Face_Recognition_Attendance_Event_System
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
     }
 }

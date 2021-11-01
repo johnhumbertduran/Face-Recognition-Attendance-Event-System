@@ -68,41 +68,43 @@ namespace Face_Recognition_Attendance_Event_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //faceRec.isTrained = true;
-            //faceRec.getPersonName(textBox1);
-
-
-
-            connection.Open();
-            string check_number = "SELECT * FROM userstbl WHERE student_number='" + textBox1.Text + "'";
-            command = new OleDbCommand(check_number,connection);
-            OleDbDataReader dr = command.ExecuteReader();
-            if (textBox1.Text != "")
-            {
-                if (dr.Read() == true)
-                {
-                    textBox2.Text = dr.GetString(2);
-                    MessageBox.Show("read?");
-                }
-                MessageBox.Show(textBox1.Text);
-                //textBox2.Text = reader1["name"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("No data found");
-            }
-            connection.Close();
+            faceRec.isTrained = true;
+            faceRec.getPersonName(textBox1);
         }
         
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
-            
+            connection.Open();
+            string check_number = "SELECT * FROM userstbl WHERE student_number='" + textBox1.Text + "'";
+            command = new OleDbCommand(check_number, connection);
+            OleDbDataReader dr = command.ExecuteReader();
+            if (textBox1.Text != null)
+            {
+                if (dr.Read() == true)
+                {
+                    textBox2.Text = dr.GetString(2);
+                    //MessageBox.Show("read?");
+                }
+                else
+                {
+                    textBox2.Text = "";
+                }
+            }
+            else
+            {
+                connection.Close();
+            }
+            connection.Close();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             //facetblBindingSource.AddNew();
+            //connection.Close();
+            faceRec.isTrained = false;
+            textBox1.Text = null;
+            textBox2.Text = "";
+            pictureBox2.Image = null;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
