@@ -47,7 +47,7 @@ namespace Face_Recognition_Attendance_Event_System
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DetectFace check = new DetectFace();
+            RegisterFace check = new RegisterFace();
             check.Show();
             Hide();
         }

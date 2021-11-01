@@ -36,8 +36,8 @@ namespace Face_Recognition_Attendance_Event_System
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +91,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(93, 90);
+            this.label1.Location = new System.Drawing.Point(67, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 4;
@@ -102,7 +102,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(95, 145);
+            this.label2.Location = new System.Drawing.Point(67, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 5;
@@ -124,17 +124,6 @@ namespace Face_Recognition_Attendance_Event_System
             this.panel2.Size = new System.Drawing.Size(245, 333);
             this.panel2.TabIndex = 7;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Product Sans Thin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(89, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 30);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Log In";
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.PowderBlue;
@@ -148,12 +137,24 @@ namespace Face_Recognition_Attendance_Event_System
             this.button3.TabIndex = 8;
             this.button3.Text = "Detect Face";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Product Sans Thin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(89, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 30);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Log In";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Product Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Location = new System.Drawing.Point(12, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(274, 75);
             this.label3.TabIndex = 8;

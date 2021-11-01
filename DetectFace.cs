@@ -32,38 +32,10 @@ namespace Face_Recognition_Attendance_Event_System
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='D:\Visual Studio Projects\Face Recognition Attendance Event System\bin\Debug\facedb.accdb'");
         OleDbCommand command = new OleDbCommand();
         OleDbDataAdapter dr = new OleDbDataAdapter();
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Admin check = new Admin();
-            check.Show();
-            Hide();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            faceRec.openCamera(pictureBox1,pictureBox2);
+            faceRec.openCamera(pictureBox1, pictureBox2);
             button2.Enabled = false;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //facetblBindingSource.EndEdit();
-            //facetblTableAdapter.Update(facedbDataSet.facetbl);
-            faceRec.Save_IMAGE(textBox1.Text);
-            connection.Open();
-            string register_face = "INSERT INTO facetbl([student_number], [student_name], [event]) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "')";
-            command = new OleDbCommand(register_face, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Successfully registered face!", "Face detected", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MessageBox.Show("Saved!");
-        }
-
-        private void DetectFace_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'facedbDataSet.facetbl' table. You can move, or remove it, as needed.
-            //this.facetblTableAdapter.Fill(this.facedbDataSet.facetbl);
-            //dataGridView1.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -71,7 +43,22 @@ namespace Face_Recognition_Attendance_Event_System
             faceRec.isTrained = true;
             faceRec.getPersonName(textBox1);
         }
-        
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            faceRec.isTrained = false;
+            textBox1.Text = null;
+            textBox2.Text = "";
+            pictureBox2.Image = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LogIn check = new LogIn();
+            check.Show();
+            Hide();
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             connection.Open();
@@ -83,33 +70,16 @@ namespace Face_Recognition_Attendance_Event_System
                 if (dr.Read() == true)
                 {
                     textBox2.Text = dr.GetString(2);
+                    textBox2.Text = dr.GetString(2);
                     //MessageBox.Show("read?");
                 }
                 else
                 {
                     textBox2.Text = "";
+                    pictureBox2.Image = null;
                 }
             }
-            else
-            {
-                connection.Close();
-            }
             connection.Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            //facetblBindingSource.AddNew();
-            //connection.Close();
-            faceRec.isTrained = false;
-            textBox1.Text = null;
-            textBox2.Text = "";
-            pictureBox2.Image = null;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
