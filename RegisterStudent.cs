@@ -54,30 +54,36 @@ namespace Face_Recognition_Attendance_Event_System
             //this.userstblTableAdapter.Fill(this.facedbDataSet.userstbl);
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             //userstblBindingSource.AddNew();
         }
-
+        public static string student_number = "";
+        public static string student_name = "";
+        public static string pass_check = "";
         private void button3_Click(object sender, EventArgs e)
         {
-            //userstblBindingSource.EndEdit();
-            //userstblTableAdapter.Update(facedbDataSet.userstbl);
             connection.Open();
-            string register = "INSERT INTO userstbl([student_number], [first_name], [last_name], [course], [student_year], [department], [username], [password]) VALUES ('" + textBox1.Text+"','"+ textBox2.Text + "','"+ textBox3.Text + "','"+ textBox4.Text + "','"+ textBox5.Text + "','"+ textBox6.Text + "','"+ textBox7.Text + "','"+ textBox8.Text + "')";
+            string register = "INSERT INTO userstbl([student_number], [first_name], [last_name], [course], [student_year], [department], [username], [password], [reg_check]) VALUES ('" + textBox1.Text+"','"+ textBox2.Text + "','"+ textBox3.Text + "','"+ textBox4.Text + "','"+ textBox5.Text + "','"+ textBox6.Text + "','"+ textBox7.Text + "','"+ textBox8.Text + "','2')";
             command = new OleDbCommand(register, connection);
             command.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show("Successfully registered!", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
             check_id_number();
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            textBox6.Text = "";
-            textBox7.Text = "";
-            textBox8.Text = "";
+
+            //textBox2.Text = "";
+            //textBox3.Text = "";
+            //textBox4.Text = "";
+            //textBox5.Text = "";
+            //textBox6.Text = "";
+            //textBox7.Text = "";
+            //textBox8.Text = "";
+            student_number = textBox1.Text;
+            student_name = textBox2.Text + " " + textBox3.Text;
+            pass_check = "1";
+            RegisterFace check = new RegisterFace();
+            check.Show();
+            Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)

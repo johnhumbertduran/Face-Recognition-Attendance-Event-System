@@ -25,6 +25,7 @@ namespace Face_Recognition_Attendance_Event_System
             if (read2.Read() == true)
             {
                 textBox3.Text = read2.GetString(1);
+                textBox4.Text = read2.GetString(2);
             }
             connection.Close();
         }
@@ -69,8 +70,7 @@ namespace Face_Recognition_Attendance_Event_System
             {
                 if (dr.Read() == true)
                 {
-                    textBox2.Text = dr.GetString(2);
-                    textBox2.Text = dr.GetString(2);
+                    textBox2.Text = dr.GetString(2) + " " + dr.GetString(3);
                     //MessageBox.Show("read?");
                 }
                 else
@@ -80,6 +80,21 @@ namespace Face_Recognition_Attendance_Event_System
                 }
             }
             connection.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            connection.Open();
+            string register_attendance = "INSERT INTO attendancetbl([student_number], [student_name], [event_name], [event_date]) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "')";
+            command = new OleDbCommand(register_attendance, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
+            MessageBox.Show("Successfully registered attendance!", "Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

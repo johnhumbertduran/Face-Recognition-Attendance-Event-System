@@ -31,7 +31,6 @@ namespace Face_Recognition_Attendance_Event_System
         {
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,6 +39,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(437, 328);
+            this.button1.Location = new System.Drawing.Point(316, 328);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 41);
             this.button1.TabIndex = 0;
@@ -62,20 +62,11 @@ namespace Face_Recognition_Attendance_Event_System
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 114);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 114);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(280, 256);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.SkyBlue;
-            this.pictureBox2.Location = new System.Drawing.Point(320, 275);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(101, 95);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // button2
             // 
@@ -84,7 +75,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(437, 187);
+            this.button2.Location = new System.Drawing.Point(316, 187);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 41);
             this.button2.TabIndex = 3;
@@ -99,7 +90,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(437, 234);
+            this.button3.Location = new System.Drawing.Point(316, 234);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 41);
             this.button3.TabIndex = 4;
@@ -109,14 +100,14 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(320, 183);
+            this.textBox1.Location = new System.Drawing.Point(317, 114);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(101, 20);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(320, 232);
+            this.textBox2.Location = new System.Drawing.Point(317, 159);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(101, 20);
             this.textBox2.TabIndex = 7;
@@ -125,7 +116,7 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(320, 164);
+            this.label1.Location = new System.Drawing.Point(317, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 8;
@@ -135,7 +126,7 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(320, 213);
+            this.label2.Location = new System.Drawing.Point(317, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 17);
             this.label2.TabIndex = 9;
@@ -146,7 +137,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Product Sans", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(134, 16);
+            this.label3.Location = new System.Drawing.Point(7, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(312, 61);
             this.label3.TabIndex = 6;
@@ -159,21 +150,33 @@ namespace Face_Recognition_Attendance_Event_System
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Product Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(437, 281);
+            this.button5.Location = new System.Drawing.Point(316, 281);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(121, 41);
             this.button5.TabIndex = 12;
             this.button5.Text = "New";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.SkyBlue;
+            this.pictureBox2.Location = new System.Drawing.Point(335, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 73);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             // 
             // RegisterFace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(602, 398);
+            this.ClientSize = new System.Drawing.Size(459, 398);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label2);
@@ -182,7 +185,6 @@ namespace Face_Recognition_Attendance_Event_System
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -203,7 +205,6 @@ namespace Face_Recognition_Attendance_Event_System
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
@@ -212,5 +213,6 @@ namespace Face_Recognition_Attendance_Event_System
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

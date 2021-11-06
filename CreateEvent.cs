@@ -31,12 +31,43 @@ namespace Face_Recognition_Attendance_Event_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            string create_event = "INSERT INTO eventtbl([event_name], [event_date], [event_place]) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "')";
-            command = new OleDbCommand(create_event, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("Successfully registered!", "Create event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "")
+            {
+                MessageBox.Show("Please input details!", "Data Empty!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (textBox1.Text != "" && textBox2.Text == "" && textBox3.Text == "")
+            {
+                MessageBox.Show("Please input event place and date!", "Insufficient Data!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (textBox1.Text == "" && textBox2.Text != "" && textBox3.Text == "")
+            {
+                MessageBox.Show("Please input event name and date!", "Insufficient Data!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(textBox1.Text == "" && textBox2.Text == "" && textBox3.Text != "")
+            {
+                MessageBox.Show("Please input event name and place!", "Insufficient Data!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(textBox1.Text != "" && textBox2.Text != "" && textBox3.Text == "")
+            {
+                MessageBox.Show("Please input event date!", "Insufficient Data!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(textBox1.Text == "" && textBox2.Text != "" && textBox3.Text != "")
+            {
+                MessageBox.Show("Please input event name!", "Insufficient Data!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (textBox1.Text != "" && textBox2.Text == "" && textBox3.Text != "")
+            {
+                MessageBox.Show("Please input event place", "Insufficient Data!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
+            {
+                connection.Open();
+                string create_event = "INSERT INTO eventtbl([event_name], [event_date], [event_place]) VALUES ('" + textBox1.Text + "','" + textBox3.Text + "','" + textBox2.Text + "')";
+                command = new OleDbCommand(create_event, connection);
+                command.ExecuteNonQuery();
+                connection.Close();
+                MessageBox.Show("Successfully registered!", "Create event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

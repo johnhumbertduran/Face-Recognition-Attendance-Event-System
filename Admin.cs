@@ -51,5 +51,12 @@ namespace Face_Recognition_Attendance_Event_System
             check.Show();
             Hide();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            StudentRecord check = new StudentRecord();
+            check.Show();
+            Hide();
+        }
     }
 }

@@ -24,6 +24,8 @@ namespace Face_Recognition_Attendance_Event_System
         OleDbDataAdapter dr = new OleDbDataAdapter();
         private void button1_Click(object sender, EventArgs e)
         {
+            //textBox1.Text = "";
+            //textBox2.Text = "";
             Admin check = new Admin();
             check.Show();
             Hide();
@@ -37,8 +39,6 @@ namespace Face_Recognition_Attendance_Event_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //facetblBindingSource.EndEdit();
-            //facetblTableAdapter.Update(facedbDataSet.facetbl);
             faceRec.Save_IMAGE(textBox1.Text);
             connection.Open();
             string register_face = "INSERT INTO facetbl([student_number], [student_name]) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "')";
@@ -56,6 +56,13 @@ namespace Face_Recognition_Attendance_Event_System
             // TODO: This line of code loads data into the 'facedbDataSet.facetbl' table. You can move, or remove it, as needed.
             //this.facetblTableAdapter.Fill(this.facedbDataSet.facetbl);
             //dataGridView1.Visible = false;
+              
+            if (RegisterStudent.pass_check == "1")
+            {
+                textBox1.Text = RegisterStudent.student_number;
+                textBox2.Text = RegisterStudent.student_name;
+                RegisterStudent.pass_check = "0";
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

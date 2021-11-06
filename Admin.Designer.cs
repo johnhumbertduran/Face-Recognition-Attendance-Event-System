@@ -34,6 +34,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -43,7 +44,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(75, 144);
+            this.button2.Location = new System.Drawing.Point(76, 118);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 49);
             this.button2.TabIndex = 4;
@@ -58,7 +59,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(75, 199);
+            this.button1.Location = new System.Drawing.Point(76, 173);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 49);
             this.button1.TabIndex = 5;
@@ -73,7 +74,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(75, 254);
+            this.button4.Location = new System.Drawing.Point(76, 228);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(137, 49);
             this.button4.TabIndex = 7;
@@ -88,7 +89,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(75, 309);
+            this.button5.Location = new System.Drawing.Point(76, 338);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(137, 49);
             this.button5.TabIndex = 8;
@@ -101,11 +102,26 @@ namespace Face_Recognition_Attendance_Event_System
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Product Sans", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(64, 41);
+            this.label3.Location = new System.Drawing.Point(64, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 61);
             this.label3.TabIndex = 6;
             this.label3.Text = "Admin";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.PowderBlue;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(76, 283);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(137, 49);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Student Record";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Admin
             // 
@@ -114,6 +130,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(298, 441);
             this.ControlBox = false;
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -137,5 +154,6 @@ namespace Face_Recognition_Attendance_Event_System
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
     }
 }

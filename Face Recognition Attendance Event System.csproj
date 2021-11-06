@@ -136,6 +136,12 @@
     <Compile Include="SchoolEvents.Designer.cs">
       <DependentUpon>SchoolEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentRecord.Designer.cs">
+      <DependentUpon>StudentRecord.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SchoolEvents.resx">
       <DependentUpon>SchoolEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRecord.resx">
+      <DependentUpon>StudentRecord.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="facedbDataSet.xsc">
       <DependentUpon>facedbDataSet.xsd</DependentUpon>
