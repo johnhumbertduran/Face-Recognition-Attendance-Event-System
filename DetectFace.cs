@@ -32,7 +32,9 @@ namespace Face_Recognition_Attendance_Event_System
         FaceRec faceRec = new FaceRec();
         OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='D:\Visual Studio Projects\Face Recognition Attendance Event System\bin\Debug\facedb.accdb'");
         OleDbCommand command = new OleDbCommand();
+        OleDbCommand command1 = new OleDbCommand();
         OleDbDataAdapter dr = new OleDbDataAdapter();
+        OleDbDataAdapter check_attendance = new OleDbDataAdapter();
         private void button2_Click(object sender, EventArgs e)
         {
             faceRec.openCamera(pictureBox1, pictureBox2);
@@ -56,6 +58,7 @@ namespace Face_Recognition_Attendance_Event_System
         private void button1_Click(object sender, EventArgs e)
         {
             LogIn check = new LogIn();
+            faceRec.isTrained = false;
             check.Show();
             Hide();
         }
@@ -71,15 +74,66 @@ namespace Face_Recognition_Attendance_Event_System
                 if (dr.Read() == true)
                 {
                     textBox2.Text = dr.GetString(2) + " " + dr.GetString(3);
-                    //MessageBox.Show("read?");
+
+                    string check_attendance = "SELECT * FROM attendancetbl WHERE student_number='" + textBox1.Text + "' AND event_date='" + textBox4.Text + "' ";
+                    command1 = new OleDbCommand(check_attendance, connection);
+                    OleDbDataReader check_attendance_date = command1.ExecuteReader();
+                    if (check_attendance_date.Read() == true)
+                    {
+                        //MessageBox.Show(check_attendance_date.GetString(1));
+                        if ((check_attendance_date.GetString(1) == textBox1.Text) && (check_attendance_date.GetString(4) == textBox4.Text))
+                        {
+                            connection.Close();
+                            MessageBox.Show(textBox2.Text + " is already registered", "Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            string register_attendance = "INSERT INTO attendancetbl([student_number], [student_name], [event_name], [event_date], [event_time]) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
+                            command = new OleDbCommand(register_attendance, connection);
+                            command.ExecuteNonQuery();
+                            connection.Close();
+                            MessageBox.Show("Succesfully saved attendance for " + textBox2.Text, "Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBox.Show("save this");
+                        }
+                        connection.Close();
+                    }
+                    else
+                    {
+                        string register_attendance = "INSERT INTO attendancetbl([student_number], [student_name], [event_name], [event_date], [event_time]) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
+                        command = new OleDbCommand(register_attendance, connection);
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                        MessageBox.Show("Succesfully saved attendance for " + textBox2.Text, "Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("False");
+                        //MessageBox.Show(check_attendance_date.GetString(3));
+                        //connection.Close();
+                    }
+
+                    
+                        //if ((textBox1.Text == check_attendance_date.GetString(2)) && (textBox4.Text == check_attendance_date.GetString(5)))
+                        //{
+                            //MessageBox.Show(check_attendance_date.GetString(3) + " is already registered", "Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //connection.Close();
+                        //}
+                        //else
+                        //{
+                            //string register_attendance = "INSERT INTO attendancetbl([student_number], [student_name], [event_name], [event_date]) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "')";
+                            //command = new OleDbCommand(register_attendance, connection);
+                            //command.ExecuteNonQuery();
+                            //connection.Close();
+                            //MessageBox.Show("Succesfully saved attendance for " + dr.GetString(2), "Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //}
+                        connection.Close();
                 }
                 else
                 {
+                    connection.Close();
                     textBox2.Text = "";
                     pictureBox2.Image = null;
                 }
             }
             connection.Close();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -93,6 +147,11 @@ namespace Face_Recognition_Attendance_Event_System
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DetectFace_Load(object sender, EventArgs e)
         {
 
         }

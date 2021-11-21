@@ -81,5 +81,10 @@ namespace Face_Recognition_Attendance_Event_System
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

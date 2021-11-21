@@ -93,10 +93,10 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateEvent.cs">
+    <Compile Include="forms\CreateEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateEvent.Designer.cs">
+    <Compile Include="forms\CreateEvent.Designer.cs">
       <DependentUpon>CreateEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="DetectFace.cs">
@@ -105,10 +105,10 @@
     <Compile Include="DetectFace.Designer.cs">
       <DependentUpon>DetectFace.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegisterFace.cs">
+    <Compile Include="forms\RegisterFace.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterFace.Designer.cs">
+    <Compile Include="forms\RegisterFace.Designer.cs">
       <DependentUpon>RegisterFace.cs</DependentUpon>
     </Compile>
     <Compile Include="facedbDataSet.Designer.cs">
@@ -124,10 +124,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterStudent.cs">
+    <Compile Include="forms\RegisterStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterStudent.Designer.cs">
+    <Compile Include="forms\RegisterStudent.Designer.cs">
       <DependentUpon>RegisterStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="SchoolEvents.cs">
@@ -136,22 +136,22 @@
     <Compile Include="SchoolEvents.Designer.cs">
       <DependentUpon>SchoolEvents.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentRecord.cs">
+    <Compile Include="forms\StudentRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentRecord.Designer.cs">
+    <Compile Include="forms\StudentRecord.Designer.cs">
       <DependentUpon>StudentRecord.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateEvent.resx">
+    <EmbeddedResource Include="forms\CreateEvent.resx">
       <DependentUpon>CreateEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetectFace.resx">
       <DependentUpon>DetectFace.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterFace.resx">
+    <EmbeddedResource Include="forms\RegisterFace.resx">
       <DependentUpon>RegisterFace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
@@ -166,13 +166,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegisterStudent.resx">
+    <EmbeddedResource Include="forms\RegisterStudent.resx">
       <DependentUpon>RegisterStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SchoolEvents.resx">
       <DependentUpon>SchoolEvents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentRecord.resx">
+    <EmbeddedResource Include="forms\StudentRecord.resx">
       <DependentUpon>StudentRecord.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="facedbDataSet.xsc">
