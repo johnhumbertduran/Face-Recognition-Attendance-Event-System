@@ -1,0 +1,3 @@
+time sa pag enter
+red sa unregistered
+auto attendance
