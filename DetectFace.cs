@@ -221,16 +221,18 @@ namespace Face_Recognition_Attendance_Event_System
             button2.Enabled = false;
             faceRec.isTrained = true;
             faceRec.getPersonName(textBox1);
-
+            string time = DateTime.Now.ToString("h:mm:ss tt");
             if (ShowMe == "in")
             {
                 textBox5.Visible = true;
                 label6.Visible = true;
+                textBox5.Text = time;
             }
             else
             {
                 textBox6.Visible = true;
                 label7.Visible = true;
+                textBox6.Text= time;
             }
         }
         private void textBox4_TextChanged(object sender, EventArgs e)

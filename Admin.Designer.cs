@@ -218,9 +218,11 @@ namespace Face_Recognition_Attendance_Event_System
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(82, 84);
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Location = new System.Drawing.Point(65, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(467, 333);
+            this.pictureBox1.Size = new System.Drawing.Size(484, 388);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);

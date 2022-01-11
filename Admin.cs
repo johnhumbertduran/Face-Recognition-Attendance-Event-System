@@ -99,14 +99,8 @@ namespace Face_Recognition_Attendance_Event_System
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
-            PictureBox picture = new PictureBox
-            {
-                Name = "pictureBox",
-                Size = new Size(100, 50),
-                Location = new Point(14, 17)
-            };
-            //p.Controls.Add(picture);
-            picture.ImageLocation = "/bin/acclogo.png";
+            Image img = Image.FromFile("D:\\Visual Studio Projects\\Face Recognition Attendance Event System\\bin\\acclogo.png");
+            pictureBox1.Image = img;
         }
     }
 }

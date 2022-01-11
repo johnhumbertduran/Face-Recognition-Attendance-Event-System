@@ -35,6 +35,7 @@ namespace Face_Recognition_Attendance_Event_System
         {
             faceRec.openCamera(pictureBox1,pictureBox2);
             button2.Enabled = false;
+            button3.Enabled = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
