@@ -68,10 +68,21 @@ namespace Face_Recognition_Attendance_Event_System
                 System.Environment.Exit(1);
             }
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        
+        public void button3_Click(object sender, EventArgs e)
         {
+            string check_time = "in";
             DetectFace check = new DetectFace();
+            check.ShowMe = check_time;
+            check.Show();
+            Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string check_time = "out";
+            DetectFace check = new DetectFace();
+            check.ShowMe = check_time;
             check.Show();
             Hide();
         }

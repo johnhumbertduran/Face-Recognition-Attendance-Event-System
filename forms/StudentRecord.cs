@@ -17,7 +17,7 @@ namespace Face_Recognition_Attendance_Event_System
         {
             InitializeComponent();
         }
-        OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='D:\Visual Studio Projects\Face Recognition Attendance Event System\bin\Debug\facedb.accdb'");
+        OleDbConnection connection = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = 'D:\Visual Studio Projects\Face Recognition Attendance Event System\bin\Debug\facedb.accdb'");
         
         private void button2_Click(object sender, EventArgs e)
         {
@@ -30,7 +30,7 @@ namespace Face_Recognition_Attendance_Event_System
         {
             connection.Open();
             OleDbCommand command = new OleDbCommand();
-            string check_data = "SELECT student_number,student_name,event_name,event_date FROM attendancetbl";
+            string check_data = "SELECT * FROM attendancetbl";
             command = new OleDbCommand(check_data, connection);
             //command.CommandText = check_data;
 
@@ -45,6 +45,11 @@ namespace Face_Recognition_Attendance_Event_System
         private void StudentRecord_Load(object sender, EventArgs e)
         {
             setDataGrid();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

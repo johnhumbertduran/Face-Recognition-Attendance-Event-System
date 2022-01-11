@@ -62,6 +62,13 @@ namespace Face_Recognition_Attendance_Event_System
                 textBox1.Text = RegisterStudent.student_number;
                 textBox2.Text = RegisterStudent.student_name;
                 RegisterStudent.pass_check = "0";
+
+                // convert to int to subtract the student number
+                int test = Int32.Parse(textBox1.Text);
+                test = test - 1;
+
+                //return to string to display the difference
+                textBox1.Text = test.ToString();
             }
         }
 

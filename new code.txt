@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -69,25 +69,18 @@ namespace Face_Recognition_Attendance_Event_System
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             connection.Open();
-            string check_number = "SELECT * FROM userstbl WHERE student_number='" + textBox1.Text + "' AND reg_check='2' ";
+            string check_number = "SELECT first_name,last_name FROM userstbl WHERE student_number='" + textBox1.Text + "' ";
             command = new OleDbCommand(check_number, connection);
-            //command1ExecuteNonQuery();
-            OleDbDataReader read3 = command.ExecuteReader();
+            OleDbDataReader dr = command.ExecuteReader();
             if (textBox1.Text != "")
             {
-                
-                //string check_number = "SELECT * FROM userstbl WHERE student_number='" + textBox1.Text + "' AND reg_check='2' ";
-                //command = new OleDbCommand(check_number, connection);
-                //OleDbDataReader dr = command.ExecuteReader();
-                //MessageBox.Show(dr.GetString(2) + " " + dr.GetString(3));
-                if (read3.Read() == true)
+                //MessageBox.Show("textbox changed");
+                if (dr.Read() == true)
                 {
-                    textBox2.Text = read3.GetString(2) + " " + read3.GetString(3);
+                    //textBox2.Text = dr.GetString(2) + " " + dr.GetString(3);
                     //textBox2.Text = dr.GetString(name);
-                    //MessageBox.Show("read dr");
-                    connection.Close();
+                    MessageBox.Show("read dr");
 
-                    connection.Open();
                     string check_attendance = "SELECT * FROM attendancetbl WHERE student_number='" + textBox1.Text + "' AND event_date='" + textBox4.Text + "' ";
                     command = new OleDbCommand(check_attendance, connection);
                     OleDbDataReader check_attendance_date = command.ExecuteReader();

@@ -20,7 +20,7 @@ namespace Face_Recognition_Attendance_Event_System
             InitializeComponent();
         }
 
-        private void OpenChildForm(Form childForm, object btnSender)
+        public void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeForm != null)
             {
@@ -67,7 +67,7 @@ namespace Face_Recognition_Attendance_Event_System
             OpenChildForm(new SchoolEvents(), sender);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        public void button4_Click(object sender, EventArgs e)
         {
             //RegisterFace check = new RegisterFace();
             //check.Show();
@@ -90,6 +90,23 @@ namespace Face_Recognition_Attendance_Event_System
                 activeForm.Close();
                 label1.Text = "Home";
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            PictureBox picture = new PictureBox
+            {
+                Name = "pictureBox",
+                Size = new Size(100, 50),
+                Location = new Point(14, 17)
+            };
+            //p.Controls.Add(picture);
+            picture.ImageLocation = "/bin/acclogo.png";
         }
     }
 }

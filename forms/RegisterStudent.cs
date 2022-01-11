@@ -81,9 +81,12 @@ namespace Face_Recognition_Attendance_Event_System
             student_number = textBox1.Text;
             student_name = textBox2.Text + " " + textBox3.Text;
             pass_check = "1";
-            RegisterFace check = new RegisterFace();
-            check.Show();
-            Hide();
+            //admin.OpenChildForm(new RegisterFace(), sender);
+            Admin admin = new Admin();
+            admin.OpenChildForm(new RegisterFace(), sender);
+            //RegisterFace check = new RegisterFace();
+            //check.Show();
+            //Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)

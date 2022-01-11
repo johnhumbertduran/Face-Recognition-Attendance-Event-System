@@ -39,6 +39,7 @@ namespace Face_Recognition_Attendance_Event_System
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +113,7 @@ namespace Face_Recognition_Attendance_Event_System
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label2);
@@ -134,9 +136,9 @@ namespace Face_Recognition_Attendance_Event_System
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Location = new System.Drawing.Point(96, 295);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 45);
+            this.button3.Size = new System.Drawing.Size(77, 45);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Detect Face";
+            this.button3.Text = "In";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -162,6 +164,21 @@ namespace Face_Recognition_Attendance_Event_System
             this.label3.TabIndex = 8;
             this.label3.Text = "Face Recognition\r\nAttendance Event System";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(130)))), ((int)(((byte)(148)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Product Sans", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Location = new System.Drawing.Point(180, 295);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(77, 45);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Out";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // LogIn
             // 
@@ -196,6 +213,7 @@ namespace Face_Recognition_Attendance_Event_System
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
