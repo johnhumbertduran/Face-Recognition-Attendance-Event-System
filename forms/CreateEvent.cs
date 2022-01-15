@@ -31,7 +31,7 @@ namespace Face_Recognition_Attendance_Event_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text == "") || (textBox2.Text == "") || (dateTimePicker1.Text.Length == 0) || (textBox4.Text == "") || (textBox5.Text == "") )
+            if ((comboBox1.Text == "") || (textBox2.Text == "") || (dateTimePicker1.Text.Length == 0) || (textBox4.Text == "") || (textBox5.Text == "") )
             {
                 MessageBox.Show("Please input details!", "Insufficient Data!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -71,10 +71,10 @@ namespace Face_Recognition_Attendance_Event_System
             //{
             //    MessageBox.Show("Please input event place and date", "Insufficient Data!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //}
-            else if (textBox1.Text != "" && textBox2.Text != "" && dateTimePicker1.Text.Length != 0 && textBox4.Text != "" && textBox5.Text != "")
+            else if (comboBox1.Text != "" && textBox2.Text != "" && dateTimePicker1.Text.Length != 0 && textBox4.Text != "" && textBox5.Text != "")
             {
                 connection.Open();
-                string create_event = "INSERT INTO eventtbl([event_name], [event_place], [event_date], [event_time_in], [event_time_out]) VALUES ('" + textBox1.Text + "','" + textBox2.Text + "','" + dateTimePicker1.Value.Date.ToShortDateString() + "','" + textBox4.Text + "','" + textBox5.Text + "')";
+                string create_event = "INSERT INTO eventtbl([event_name], [event_place], [event_date], [event_time_in], [event_time_out]) VALUES ('" + comboBox1.Text + "','" + textBox2.Text + "','" + dateTimePicker1.Value.Date.ToShortDateString() + "','" + textBox4.Text + "','" + textBox5.Text + "')";
                 command = new OleDbCommand(create_event, connection);
                 command.ExecuteNonQuery();
                 connection.Close();
